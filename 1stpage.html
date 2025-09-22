@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Artisan Roast - Coffee Shop</title>
+    <style>
+        /* CSS styling yahan shuru hota hai */
+        :root {
+            --primary-color: #6A4032; /* Gehri brown */
+            --secondary-color: #A36A5A; /* Halka brown */
+            --background-color: #F8F4E3; /* Cream background */
+            --text-color: #333;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Nav Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: var(--secondary-color);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=2940&auto=format&fit=crop') center/cover no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        /* Product Section */
+        .products {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .products h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            text-decoration: underline;
+            text-underline-offset: 8px;
+            text-decoration-color: var(--secondary-color);
+        }
+
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .product-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .product-card h3 {
+            margin: 0;
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+
+        .product-card p {
+            font-size: 16px;
+            color: #666;
+        }
+
+        .price {
+            font-size: 20px;
+            color: var(--secondary-color);
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .buy-button {
+            display: inline-block;
+            padding: 10px 25px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .buy-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 20px;
+            }
+            .navbar a {
+                margin: 10px 0;
+            }
+            .hero h1 {
+                font-size: 40px;
+            }
+            .product-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">The Artisan Roast</div>
+        <div>
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>Handcrafted Coffee, Just for You.</h1>
+    </div>
+
+    <section class="products">
+        <h2>Our Signature Roasts</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1541167713437-25e27a6f3b06?q=80&w=2940&auto=format&fit=crop" alt="Espresso Blend">
+                <h3>The Bold Espresso</h3>
+                <p>A rich, dark roast with notes of chocolate and caramel.</p>
+                <div class="price">$15.99</div>
+                <a href="#" class="buy-button">Buy Now</a>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1528695764032-1598f4848d1e?q=80&w=2835&auto=format&fit=crop" alt="Light Roast">
+                <h3>The Sunshine Blend</h3>
+                <p>A light, floral roast perfect for your morning pour-over.</p>
+                <div class="price">$14.50</div>
+                <a href="#" class="buy-button">Buy Now</a>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1574737229716-e523dd0a24df?q=80&w=2835&auto=format&fit=crop" alt="Decaf Coffee">
+                <h3>The Cozy Decaf</h3>
+                <p>All the flavor, none of the caffeine. Smooth and satisfying.</p>
+                <div class="price">$13.75</div>
+                <a href="#" class="buy-button">Buy Now</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 The Artisan Roast. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
